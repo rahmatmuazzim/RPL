@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Rahmat muazzim.js</title>
+
+</head>
+<body>
+<h1>KALKULATOR </h1>
+  <header>
+    <div class="sticky">
+	<nav>
+  <ul>
+	<li><a onclick="scrollToSection('section1')">Matematika Sederhana</a></li>
+	<li><a onclick="scrollToSection('section2')">Validasi Umur</a></li>
+	<li><a onclick="scrollToSection('section3')">Deret Fibonacci</a></li>
+	<li><a onclick="scrollToSection('section4')">Kalkulator BMI</a></li>
+	<li><a onclick="scrollToSection('section5')">Teka-Teki Kata</a></li>
+	
+	</nav>
+  </ul>
+  </header>
+  <div class="pgsK">
+  <div class="text">
+<p></p>
+<p></p>
+ <div class="text3">
+</div>
+ <div class="text5">
+</div>
+</div></div>
+  <div class="pgsk">
+  <div class="text2">
+</div>
+ <div class="text4">
+</div></div>
+  <main>
+    <!-- Soal Matematika Sederhana -->
+    <section id="section1">
+      <h2>Soal Matematika Sederhana</h2>
+      <label for="num1">Angka 1:</label>
+      <input type="number" id="num1">
+      <label for="num2">Angka 2:</label>
+      <input type="number" id="num2">
+      <button onclick="calculateSum()">Hitung Penjumlahan</button>
+      <p class="result" id="result"></p>
+    </section>
+
+    <!-- Soal Validasi Umur -->
+     <section id="section2">
+      <h2>Soal Validasi Umur</h2>
+      <label for="birthdate">Tanggal Lahir:</label>
+      <input type="date" id="birthdate">
+      <button onclick="checkAge()">Cek Umur</button>
+      <p class="result" id="ageResult"></p>
+    </section>
+
+    <!-- Soal Deret Fibonacci -->
+    <section id="section3">
+      <h2>Soal Deret Fibonacci</h2>
+      <label for="fibLength">Panjang Deret:</label>
+      <input type="number" id="fibLength">
+      <button onclick="generateFibonacci()">Generate Fibonacci</button>
+      <p class="result" id="fibResult"></p>
+    </section>
+
+    <!-- Soal Kalkulator BMI -->
+     <section id="section4">
+      <h2>Soal Kalkulator BMI</h2>
+      <label for="weight">Berat (kg):</label>
+      <input type="number" id="weight">
+      <label for="height">Tinggi (m):</label>
+      <input type="number" id="height">
+      <label for="age">Usia:</label>
+      <input type="number" id="age">
+      <button onclick="calculateBMI()">Hitung BMI</button>
+      <p class="result" id="bmiResult"></p>
+    </section>
+
+    <!-- Soal Teka-Teki Kata -->
+    <section id="section5">
+      <h2>Soal Teka-Teki Kata</h2>
+      <label for="wordGuess">Tebak Kata:</label>
+      <input type="text" id="wordGuess">
+      <button onclick="checkGuess()">Tebak</button>
+      <p class="result" id="guessResult"></p>
+    </section>
+  </main>
+
+  <script>
+    // Soal Matematika Sederhana
+    function calculateSum() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var sum = num1 + num2;
+      document.getElementById("result").innerHTML = "Hasil penjumlahan: " + sum;
+    }
+
+    // Soal Validasi Umur
+    function checkAge() {
+      var birthdate = new Date(document.getElementById("birthdate").value);
+      var today = new Date();
+      var age = today.getFullYear() - birthdate.getFullYear();
+      if (age >= 18) {
+        document.getElementById("ageResult").innerHTML = "Anda sudah cukup umur.";
+      } else {
+        document.getElementById("ageResult").innerHTML = "Anda belum cukup umur.";
+      }
+    }
+
+    // Soal Deret Fibonacci
+    function generateFibonacci() {
+      var length = parseInt(document.getElementById("fibLength").value);
+      var fibSeries = [0, 1];
+      for (var i = 2; i < length; i++) {
+        fibSeries[i] = fibSeries[i - 1] + fibSeries[i - 2];
+      }
+      document.getElementById("fibResult").innerHTML = "Deret Fibonacci: " + fibSeries.join(", ");
+    }
+
+    // Soal Kalkulator BMI
+    function calculateBMI() {
+      var weight = parseFloat(document.getElementById("weight").value);
+      var height = parseFloat(document.getElementById("height").value);
+      var age = parseInt(document.getElementById("age").value);
+      var bmi = weight / Math.pow(height, 2);
+      document.getElementById("bmiResult").innerHTML = "BMI Anda: " + bmi.toFixed(2) + "<br>Usia Anda: " + age + " tahun";
+    }
+
+    // Soal Teka-Teki Kata
+    var targetWord = "javascript";
+    var remainingAttempts = 3;
+
+    function checkGuess() {
+      var userGuess = document.getElementById("wordGuess").value.toLowerCase();
+      var resultDisplay = document.getElementById("guessResult");
+
+      if (userGuess.length === 1) {
+        if (targetWord.includes(userGuess)) {
+          resultDisplay.innerHTML = "Huruf benar!";
+        } else {
+          resultDisplay.innerHTML = "Huruf salah. Kesempatan tersisa: " + (--remainingAttempts);
+        }
+      } else {
+        resultDisplay.innerHTML = "Masukkan hanya satu huruf.";
+      }
+    }
+  </script>
+  <script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            window.scrollTo({
+                top: section.offsetTop - 75, // Sesuaikan offset sesuai kebutuhan
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>
+
+<footer><h3>Copyright @Rahmat muazzim</h3></footer>
+</body>
+</html>

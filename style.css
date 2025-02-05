@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #fff;
+  }
+
+  header {
+
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  section {
+    margin-bottom: 30px;
+    background-color: 	#BC8F8F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #111;
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+  h1{
+  font-family:Playfair Display;
+  color: #111;
+  margin-bottom: 30px;
+    background-color: #A9A9A9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align:center;
+  }
+
+  .result {
+    font-weight: bold;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      height: 100%;
+      overflow: auto;
+  }
+
+  li {
+  float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      cursor: pointer;
+      }
+
+      li a:hover {
+      background-color: #BC8F8F;
+      }
+      .pgsK{
+      background-color: #fff;
+      float: left;
+      top: 68px;
+      width: 220px; /* Lebar menu di sebelah kiri */
+      height: 234vh; /* Sesuaikan tinggi menu dengan tinggi viewport */
+      overflow-y: auto; 
+      color: white;
+      }
+      .pgsk{
+      
+      background-color: #fff;
+      float: right;
+      top: 68px;
+      width: 220px; /* Lebar menu di sebelah kiri */
+      height: 234vh; /* Sesuaikan tinggi menu dengan tinggi viewport */
+      overflow-y: auto;
+      color: white;		
+      }
+      .text{
+      padding-top: 10px
+      }
+      .text2{
+      padding-top: 370px
+      }
+      .text3{
+      padding-top: 570px
+      }
+      .text4{
+      padding-top: 540px
+      }
+      .text5{
+      padding-top: 700px
+      }
+      footer{
+      padding:8px;
+      text-align: center;
+      padding: 3px;
+      background-color: #A9A9A9;
+      color:#111(255, 255, 255, 0.322)55, 255, 255);
+      }
